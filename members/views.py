@@ -5,7 +5,7 @@ from django.template import loader
 from .models import kategori,produk
 
 def members(request):
-  template = loader.get_template('menu.html')
+  template = loader.get_template('index.html')
   return HttpResponse(template.render())
 
 def kategori_produk(request):
@@ -16,4 +16,4 @@ def kategori_produk(request):
     'contoh': 'ini contoh lagi',
     'kategori': data,
   }
-  return HttpResponse(template.render (context, request))
+  return HttpResponse(template.render(context, request))
